@@ -5,7 +5,7 @@ import "hardhat/console.sol";
 
 contract Greeter {
     string private greeting;
-    int[2] public fix = [1,2];
+    // int[2] public fix = [1,2];
 
     constructor(string memory _greeting) {
         console.log("Deploying a Greeter with greeting:", _greeting);

@@ -1,0 +1,100 @@
+{
+  "address": "0xa590239311aE308A6F8Bc7e75c18F07DD63C8C03",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "v_",
+          "type": "int256"
+        }
+      ],
+      "name": "setV",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "test1",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "v",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x399c2dbb683bb5ac6d35cecc08aeedb48fb5b5e25c857ed10ea403de7c8008da",
+  "receipt": {
+    "to": null,
+    "from": "0xDfE424616470acd397a956751553adA92BE690bd",
+    "contractAddress": "0xa590239311aE308A6F8Bc7e75c18F07DD63C8C03",
+    "transactionIndex": 52,
+    "gasUsed": "153465",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x274658eb7ae098fddf478e445943be3ecbfa9d3d18e600643eb50ba95b023fdc",
+    "transactionHash": "0x399c2dbb683bb5ac6d35cecc08aeedb48fb5b5e25c857ed10ea403de7c8008da",
+    "logs": [],
+    "blockNumber": 9555449,
+    "cumulativeGasUsed": "19262291",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 2,
+  "solcInputHash": "7f2508ed71e2b5274b4357045fd8ad87",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"v_\",\"type\":\"int256\"}],\"name\":\"setV\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"test1\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"v\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ERC1271Test.sol\":\"ERC1271Test\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/interfaces/IERC1271.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (interfaces/IERC1271.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC1271 standard signature validation method for\\n * contracts as defined in https://eips.ethereum.org/EIPS/eip-1271[ERC-1271].\\n *\\n * _Available since v4.1._\\n */\\ninterface IERC1271 {\\n    /**\\n     * @dev Should return whether the signature provided is valid for the provided data\\n     * @param hash      Hash of the data to be signed\\n     * @param signature Signature byte array associated with _data\\n     */\\n    function isValidSignature(bytes32 hash, bytes memory signature) external view returns (bytes4 magicValue);\\n}\\n\",\"keccak256\":\"0x0705a4b1b86d7b0bd8432118f226ba139c44b9dcaba0a6eafba2dd7d0639c544\",\"license\":\"MIT\"},\"contracts/ERC1271Test.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\npragma solidity 0.8.4;\\n\\nimport \\\"@openzeppelin/contracts/interfaces/IERC1271.sol\\\";\\n\\ncontract ERC1271Test {\\n  int public v;\\n  constructor(){\\n\\n  }\\n\\n  function test1() pure public returns(bytes4){\\n    return IERC1271.isValidSignature.selector;\\n  }\\n\\n  function setV(int v_) public {\\n    v = v_;\\n  }\\n}\",\"keccak256\":\"0x298c0d41ee7d723898ff053a408307038926df040868b2bf642d30916a01e0f5\",\"license\":\"Unlicense\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101d2806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806335169adf146100465780636b59084d146100625780637c2efcba14610080575b600080fd5b610060600480360381019061005b91906100d2565b61009e565b005b61006a6100a8565b6040516100779190610119565b60405180910390f35b6100886100b7565b6040516100959190610134565b60405180910390f35b8060008190555050565b6000631626ba7e60e01b905090565b60005481565b6000813590506100cc81610185565b92915050565b6000602082840312156100e457600080fd5b60006100f2848285016100bd565b91505092915050565b6101048161014f565b82525050565b6101138161017b565b82525050565b600060208201905061012e60008301846100fb565b92915050565b6000602082019050610149600083018461010a565b92915050565b60007fffffffff0000000000000000000000000000000000000000000000000000000082169050919050565b6000819050919050565b61018e8161017b565b811461019957600080fd5b5056fea2646970667358221220126fa4f2c7b6ae0d85b54663e970ef71e5261a51121d58d4c1f5518a556ba7f464736f6c63430008040033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806335169adf146100465780636b59084d146100625780637c2efcba14610080575b600080fd5b610060600480360381019061005b91906100d2565b61009e565b005b61006a6100a8565b6040516100779190610119565b60405180910390f35b6100886100b7565b6040516100959190610134565b60405180910390f35b8060008190555050565b6000631626ba7e60e01b905090565b60005481565b6000813590506100cc81610185565b92915050565b6000602082840312156100e457600080fd5b60006100f2848285016100bd565b91505092915050565b6101048161014f565b82525050565b6101138161017b565b82525050565b600060208201905061012e60008301846100fb565b92915050565b6000602082019050610149600083018461010a565b92915050565b60007fffffffff0000000000000000000000000000000000000000000000000000000082169050919050565b6000819050919050565b61018e8161017b565b811461019957600080fd5b5056fea2646970667358221220126fa4f2c7b6ae0d85b54663e970ef71e5261a51121d58d4c1f5518a556ba7f464736f6c63430008040033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 18,
+        "contract": "contracts/ERC1271Test.sol:ERC1271Test",
+        "label": "v",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_int256"
+      }
+    ],
+    "types": {
+      "t_int256": {
+        "encoding": "inplace",
+        "label": "int256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
